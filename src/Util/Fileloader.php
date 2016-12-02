@@ -30,6 +30,11 @@ class PHPUnit_Util_Fileloader
         self::$filename_rewrite_callback = $callback;
     }
 
+    public static function getFilenameRewriteCallback()
+    {
+        return self::$filename_rewrite_callback;
+    }
+
     /**
      * Provide callback for restoring rewritten test file names
      * @param callable $callback (rewritten_filename => source_filename)
